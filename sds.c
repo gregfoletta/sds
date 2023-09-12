@@ -30,6 +30,10 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wshadow"
+#pragma GCC diagnostic ignored "-Wconversion"
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -38,6 +42,7 @@
 #include <limits.h>
 #include "sds.h"
 #include "sdsalloc.h"
+
 
 const char *SDS_NOINIT = "SDS_NOINIT";
 
@@ -1326,3 +1331,5 @@ int main(void) {
     return sdsTest();
 }
 #endif
+
+#pragma GCC diagnostic pop

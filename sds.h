@@ -30,6 +30,9 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wconversion"
+
 #ifndef __SDS_H
 #define __SDS_H
 
@@ -272,3 +275,5 @@ int sdsTest(int argc, char *argv[]);
 #endif
 
 #endif
+
+#pragma GCC diagnostic pop
